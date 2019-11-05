@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import {widthPercentageToDP as wp,
-  heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {widthPercentageToDP,
+  heightPercentageToDP} from 'react-native-responsive-screen';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: '#F8F9FD',
-    borderRadius: wp(2)
+    borderRadius: widthPercentageToDP(2)
   },
   touchableHighlight: {
     borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
@@ -20,10 +20,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   portion1: {
-    marginLeft: wp(3),
+    marginLeft: widthPercentageToDP(3),
   },
   portion2: {
-    marginLeft: wp(6),
+    marginLeft: widthPercentageToDP(6),
     alignItems: 'flex-end'
   },
   coinValue: {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   valueMargin: {
-    marginLeft: wp(1)
+    marginLeft: widthPercentageToDP(1)
   },
   dollarEquivalent: {
     color: '#3C3D41',

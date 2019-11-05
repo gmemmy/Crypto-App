@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Text, View, TouchableOpacity, Image, TouchableHighlight } from 'react-native';
 import styles from './styles';
-import {widthPercentageToDP as wp,
-  heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {widthPercentageToDP,
+  heightPercentageToDP} from 'react-native-responsive-screen';
 import { cards } from '../../../screens/Transactions/constants';
 
 // Icons
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign, Foundation, MaterialCommunityIcons} from '@expo/vector-icons';
 
 const TopHalf = () => {
   return (
@@ -33,8 +33,8 @@ const TopHalf = () => {
         <View style={{
           flexDirection: 'row',
           alignItems: 'center',
-          marginLeft: wp(7),
-          marginBottom: hp(0.5)
+          marginLeft: widthPercentageToDP(7),
+          marginBottom: heightPercentageToDP(0.5)
           }}>
           <Text style={{
             fontSize: 15,
@@ -47,11 +47,11 @@ const TopHalf = () => {
             name='arrowup'
             size={20}
             color='#2DD6BB'
-            style={{ marginBottom: hp(0.5) }}
+            style={{ marginBottom: heightPercentageToDP(0.5) }}
           />
         </View>
       </View>
-      <View style={[styles.coinValue, { marginTop: hp(0.5) }]}>
+      <View style={[styles.coinValue, { marginTop: heightPercentageToDP(0.5) }]}>
         <Text style={[styles.currencyValue, { fontSize: 15 }]}>
           18,659.55
         </Text>
@@ -61,26 +61,57 @@ const TopHalf = () => {
       </View>
       <View style={styles.currencyCards}>
           {cards.map(card => (
-            <TouchableOpacity key={cards.indexOf(card)} style={{ paddingHorizontal: wp(1.3) }}>
+            <TouchableOpacity key={cards.indexOf(card)} style={{
+               paddingHorizontal: widthPercentageToDP(1.0) }}
+            >
               <View style={styles.cardView}>
-                  <View style={styles.cardTop}>
-                    <Image source={card.logo} style={styles.logo} />
-                    <Text style={styles.percentageText}>{card.percentage}</Text>
-                  </View>
+                <View style={styles.cardTop}>
+                  {card.type === 'BTC' && (
+                    <TouchableHighlight style={[styles.touchableHighlight,
+                      { backgroundColor: card.backgroundColor }]}>
+                      <Foundation
+                        name='bitcoin'
+                        color='white'
+                        size={25}
+                      />
+                    </TouchableHighlight>
+                  )}
+                   {card.type === 'ETH' && (
+                    <TouchableHighlight style={[styles.touchableHighlight,
+                      { backgroundColor: card.backgroundColor }]}>
+                      <Foundation
+                        name='bitcoin'
+                        color='white'
+                        size={25}
+                      />
+                    </TouchableHighlight>
+                  )}
+                   {card.type === 'LTE' && (
+                    <TouchableHighlight style={[styles.touchableHighlight,
+                      { backgroundColor: card.backgroundColor }]}>
+                      <MaterialCommunityIcons
+                        name='litecoin'
+                        color='white'
+                        size={20}
+                      />
+                    </TouchableHighlight>
+                  )}
+                  <Text style={styles.percentageText}>{card.percentage}</Text>
+                </View>
                   <View style={styles.cardBottom}>
                     <View style={styles.cardBottom1}>
-                      <Text style={[styles.currencyValue, { fontSize: 10 }]}>
+                      <Text style={[styles.currencyValue, styles.sizes]}>
                         {card.value}
                       </Text>
-                      <Text style={[styles.currency, {fontSize: 10 }]}>
+                      <Text style={[styles.currency, styles.sizes]}>
                         {card.type}
                       </Text>
                     </View>
                     <View style={styles.cardBottom1}>
-                      <Text style={[styles.currencyValue, { fontSize: 10, color: '#ACABF0' }]}>
+                      <Text style={[styles.currencyValue, styles.sizes, { color: '#ACABF0' }]}>
                         {card.equivalent}
                       </Text>
-                      <Text style={[styles.currency, {fontSize: 10 }]}>
+                      <Text style={[styles.currency, styles.sizes]}>
                         {card.equivalentType}
                       </Text>
                     </View>

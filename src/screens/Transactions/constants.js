@@ -8,7 +8,8 @@ const cards = [
     value: '2.00102000',
     type: 'BTC',
     equivalent: '18,659.55',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    backgroundColor: '#EB9240'
   },
   {
     logo: bitcoin,
@@ -16,7 +17,8 @@ const cards = [
     value: '3.30102000',
     type: 'ETH',
     equivalent: '2,659.55',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    backgroundColor: '#4A4AB5'
   },
   {
     logo: litecoin,
@@ -24,7 +26,8 @@ const cards = [
     value: '1.30102000',
     type: 'LTE',
     equivalent: '59.55',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    backgroundColor: '#4A4AB5'
   },
 ]
 

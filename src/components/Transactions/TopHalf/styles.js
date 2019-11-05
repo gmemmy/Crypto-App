@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import {widthPercentageToDP as wp,
   heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
@@ -28,6 +28,15 @@ const styles = StyleSheet.create({
     marginTop: hp(2),
     alignItems: 'flex-end'
   },
+  touchableHighlight: {
+    borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
+    width: Dimensions.get('window').width * 0.1,
+    height: Dimensions.get('window').width * 0.1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: wp(1),
+    marginTop: hp(1)
+  },
   currency: {
     marginLeft: wp(1),
     fontWeight: 'bold',
@@ -39,7 +48,8 @@ const styles = StyleSheet.create({
   },
   currencyCards: {
     flexDirection: 'row',
-    marginTop: hp(5)
+    marginTop: hp(5),
+    marginLeft: wp(1.2)
   },
   cardView: {
     height: 120,
@@ -57,13 +67,6 @@ const styles = StyleSheet.create({
     marginLeft: wp(10),
     marginTop: wp(3)
   },
-  logo: {
-    height: hp(8),
-    width: wp(8),
-    borderRadius: wp(50) / 2,
-    resizeMode: 'contain',
-    marginLeft: wp(2)
-  },
   cardBottom: {
     marginTop: wp(8),
     marginLeft: wp(2),
@@ -73,6 +76,9 @@ const styles = StyleSheet.create({
   },
   cardBottom2: {
     flexDirection: 'row'
+  },
+  sizes: {
+    fontSize: 10
   }
 });
 

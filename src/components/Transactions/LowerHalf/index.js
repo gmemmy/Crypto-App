@@ -2,8 +2,7 @@ import React, { Fragment } from 'react';
 import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
 import { Card } from 'react-native-elements';
 import styles from './styles';
-import {widthPercentageToDP as wp,
-  heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { heightPercentageToDP } from 'react-native-responsive-screen';
 import { tradeHistory } from '../../../screens/Transactions/constants';
 
 // Icons
@@ -57,7 +56,7 @@ const LowerHalf = () => {
           </View>
         </Card>
       ))}
-      <View style={{height: hp(3)}} />
+      <View style={{height: heightPercentageToDP(3)}} />
     </ScrollView>
   )
 }
