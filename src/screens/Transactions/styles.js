@@ -5,8 +5,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   upperHalf: {
-    flex: 0.5,
+    flex: 0.58,
     backgroundColor: '#4D4ACD',
+  },
+  lowerHalf: {
+    flex: 0.42,
+    backgroundColor: '#F2F5FF'
   }
 });
 

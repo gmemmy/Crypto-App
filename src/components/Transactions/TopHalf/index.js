@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
 import {widthPercentageToDP as wp,
   heightPercentageToDP as hp} from 'react-native-responsive-screen';
-import cards from '../../../screens/Transactions/constants';
+import { cards } from '../../../screens/Transactions/constants';
 
 // Icons
 import { AntDesign } from '@expo/vector-icons';
@@ -39,14 +39,14 @@ const TopHalf = () => {
           <Text style={{
             fontSize: 15,
             fontWeight: 'bold',
-            color: '#39ABBE'
+            color: '#2DD6BB'
           }}>
             +3.678%
           </Text>
           <AntDesign
             name='arrowup'
             size={20}
-            color='#39ABBE'
+            color='#2DD6BB'
             style={{ marginBottom: hp(0.5) }}
           />
         </View>

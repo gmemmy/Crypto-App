@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   header: {
     flex: 0.15,
     flexDirection: 'row',
-    marginTop: hp(4),
+    marginTop: hp(7),
     alignItems: 'center'
   },
   menuIcon: {
@@ -19,16 +19,17 @@ const styles = StyleSheet.create({
   },
   balanceText: {
     marginLeft: wp(4),
-    marginTop: hp(3),
+    marginTop: hp(5),
     color: '#ACABF0'
   },
   coinValue: {
     flexDirection: 'row',
     marginLeft: wp(4),
+    marginTop: hp(2),
     alignItems: 'flex-end'
   },
   currency: {
-    marginLeft: wp(3),
+    marginLeft: wp(1),
     fontWeight: 'bold',
     color: '#ACABF0'
   },

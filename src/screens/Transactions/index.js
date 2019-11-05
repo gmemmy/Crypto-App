@@ -4,6 +4,7 @@ import styles from './styles';
 
 // Components
 import TopHalf from '../../components/Transactions/TopHalf/index'
+import LowerHalf from '../../components/Transactions/LowerHalf/index';
 
 const Transactions = () => {
   return (
@@ -12,7 +13,7 @@ const Transactions = () => {
         <TopHalf />
       </View>
       <View style={styles.lowerHalf}>
-
+        <LowerHalf />
       </View>
     </View>
   )
