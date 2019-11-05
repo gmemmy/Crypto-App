@@ -56,7 +56,7 @@ const LowerHalf = () => {
           </View>
         </Card>
       ))}
-      <View style={{height: heightPercentageToDP(3)}} />
+      <View style={{height: heightPercentageToDP(3), backgroundColor: '#F2F5FF'}} />
     </ScrollView>
   )
 }

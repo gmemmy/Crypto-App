@@ -1,15 +1,16 @@
 import { StyleSheet } from 'react-native';
+import {widthPercentageToDP,
+  heightPercentageToDP} from 'react-native-responsive-screen';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
   upperHalf: {
-    flex: 0.58,
     backgroundColor: '#4D4ACD',
   },
   lowerHalf: {
-    flex: 0.42,
+    flex: heightPercentageToDP(2),
     backgroundColor: '#F2F5FF'
   }
 });

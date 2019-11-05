@@ -17,6 +17,9 @@ const Purchase = ({ navigation }) => {
           <ExchangeRate />
         </View>
       </View>
+      <View style={styles.bottomHalf}>
+
+      </View>
     </View>
   )
 }

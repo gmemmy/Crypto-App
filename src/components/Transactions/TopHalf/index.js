@@ -32,9 +32,9 @@ const TopHalf = (props) => {
         </Text>
         <View style={{
           flexDirection: 'row',
-          alignItems: 'center',
-          marginLeft: widthPercentageToDP(7),
-          marginBottom: heightPercentageToDP(0.5)
+          alignItems: 'flex-end',
+          marginLeft: 'auto',
+          marginBottom: heightPercentageToDP(0.5),
           }}>
           <Text style={{
             fontSize: 15,

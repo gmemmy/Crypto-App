@@ -4,29 +4,26 @@ import {widthPercentageToDP,
 
 const styles = StyleSheet.create({
   header: {
-    flex: 0.15,
     flexDirection: 'row',
     marginTop: heightPercentageToDP(7),
-    alignItems: 'center'
+    alignItems: 'center',
   },
   menuIcon: {
     marginLeft: widthPercentageToDP(4),
   },
   headerText: {
-    marginLeft: widthPercentageToDP(23),
+    marginLeft: widthPercentageToDP(25),
     color: '#ffff',
     fontWeight: 'bold'
   },
   balanceText: {
     marginLeft: widthPercentageToDP(4),
-    marginTop: heightPercentageToDP(5),
+    marginTop: heightPercentageToDP(2),
     color: '#ACABF0'
   },
   coinValue: {
     flexDirection: 'row',
     marginLeft: widthPercentageToDP(4),
-    marginTop: heightPercentageToDP(2),
-    alignItems: 'flex-end'
   },
   touchableHighlight: {
     borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
@@ -48,7 +45,7 @@ const styles = StyleSheet.create({
   },
   currencyCards: {
     flexDirection: 'row',
-    marginTop: heightPercentageToDP(5),
+    marginTop: heightPercentageToDP(2),
     marginLeft: widthPercentageToDP(1.2)
   },
   cardView: {
