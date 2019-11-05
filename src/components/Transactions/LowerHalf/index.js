@@ -15,12 +15,14 @@ const LowerHalf = () => {
       {tradeHistory.map(item => (
         <Card containerStyle={styles.card} key={tradeHistory.indexOf(item)}>
           <View style={styles.container}>
-            <TouchableHighlight style={styles.touchableHighlight}>
+            <TouchableHighlight style={[styles.touchableHighlight,
+               { backgroundColor: item.color 
+            }]}>
               <MaterialCommunityIcons
-                name='arrow-expand-down'
+                name={item.color === '#11CC71' ? 'arrow-expand-down' : 'arrow-expand-up'}
                 size={25}
                 color='white'
-              />
+               />
             </TouchableHighlight>
             <View style={styles.portion1}>
               <Text style={{ 
@@ -36,10 +38,10 @@ const LowerHalf = () => {
             </View>
             <View style={styles.portion2}>
               <View style={styles.coinValue}>
-                <Text style={[styles.coin]}>
+                <Text style={[styles.coin, { color: item.color }]}>
                   {item.value}
                 </Text>
-                <Text style={[styles.coin, styles.valueMargin]}>
+                <Text style={[styles.coin, styles.valueMargin, { color: item.color }]}>
                   {item.type}
                 </Text>
               </View>
@@ -55,7 +57,7 @@ const LowerHalf = () => {
           </View>
         </Card>
       ))}
-      <View style={{height: 20}} />
+      <View style={{height: hp(3)}} />
     </ScrollView>
   )
 }

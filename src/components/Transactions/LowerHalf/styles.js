@@ -18,13 +18,12 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').width * 0.1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1FC375',
   },
   portion1: {
     marginLeft: wp(3),
   },
   portion2: {
-    marginLeft: wp(8),
+    marginLeft: wp(6),
     alignItems: 'flex-end'
   },
   coinValue: {
@@ -34,7 +33,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   coin: {
-    color: '#49D693',
     fontSize: 14
   },
   valueMargin: {

@@ -30,46 +30,55 @@ const cards = [
 
 const tradeHistory = [
   {
-    statusIcon: 'Hey',
+    color: '#11CC71',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
-    value: '0.000102000',
+    value: '+0.00102000',
     type: 'BTC',
     equivalent: '234',
     equivalentType: 'USD'
   },
   {
-    statusIcon: 'Hey',
+    color: '#F76869',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
-    value: '0.000102000',
+    value: '-0.030102000',
+    type: 'LTC',
+    equivalent: '234',
+    equivalentType: 'USD'
+  },
+  {
+    color: '#11CC71',
+    status: 'Received',
+    date: 'Oct 25, 5:25PM',
+    value: '+0.02102000',
+    type: 'BCH',
+    equivalent: '234',
+    equivalentType: 'USD'
+  },
+  {
+    color: '#F76869',
+    status: 'Received',
+    date: 'Oct 25, 5:25PM',
+    value: '-0.000102000',
     type: 'BTC',
     equivalent: '234',
     equivalentType: 'USD'
   },
   {
-    statusIcon: 'Hey',
+    color: '#11CC71',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
-    value: '0.000102000',
-    type: 'BTC',
+    value: '+0.000102000',
+    type: 'LTC',
     equivalent: '234',
     equivalentType: 'USD'
   },
   {
-    statusIcon: 'Hey',
+    color: '#F76869',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
-    value: '0.000102000',
-    type: 'BTC',
-    equivalent: '234',
-    equivalentType: 'USD'
-  },
-  {
-    statusIcon: 'Hey',
-    status: 'Received',
-    date: 'Oct 25, 5:25PM',
-    value: '0.000102000',
+    value: '-0.000102000',
     type: 'BTC',
     equivalent: '234',
     equivalentType: 'USD'
