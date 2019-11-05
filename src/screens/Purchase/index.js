@@ -1,10 +1,24 @@
-import React, { Fragment } from 'react';
-import { Text, View, TouchableOpacity, Image, TouchableHighlight } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
 import styles from './styles';
-import {widthPercentageToDP,
-  heightPercentageToDP} from 'react-native-responsive-screen';
-import { cards } from '../../../screens/Transactions/constants';
 
-const Purchase = () => {
+// Components
+import Header from '../../components/Purchase/Header';
+import ExchangeRate from '../../components/Purchase/ExchangeRate';
 
+const Purchase = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.topHalf}>
+        <View style={styles.header}>
+          <Header pressed={navigation} />
+        </View>
+        <View style={styles.exchangeRate}>
+          <ExchangeRate />
+        </View>
+      </View>
+    </View>
+  )
 }
+
+export default Purchase;

@@ -6,11 +6,11 @@ import styles from './styles';
 import TopHalf from '../../components/Transactions/TopHalf/index'
 import LowerHalf from '../../components/Transactions/LowerHalf/index';
 
-const Transactions = () => {
+const Transactions = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.upperHalf}>
-        <TopHalf />
+        <TopHalf pressed={navigation} />
       </View>
       <View style={styles.lowerHalf}>
         <LowerHalf />

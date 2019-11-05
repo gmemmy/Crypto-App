@@ -8,7 +8,7 @@ import { cards } from '../../../screens/Transactions/constants';
 // Icons
 import { AntDesign, Foundation, MaterialCommunityIcons} from '@expo/vector-icons';
 
-const TopHalf = () => {
+const TopHalf = (props) => {
   return (
     <Fragment>
       <View style={styles.header}>
@@ -61,7 +61,8 @@ const TopHalf = () => {
       </View>
       <View style={styles.currencyCards}>
           {cards.map(card => (
-            <TouchableOpacity key={cards.indexOf(card)} style={{
+            <TouchableOpacity onPress={() => props.pressed.navigate('Purchase')}
+               key={cards.indexOf(card)} style={{
                paddingHorizontal: widthPercentageToDP(1.0) }}
             >
               <View style={styles.cardView}>

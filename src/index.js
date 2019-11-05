@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 
 import Home from './screens/Home';
 import Transactions from './screens/Transactions';
+import Purchase from './screens/Purchase';
 
 const AppContainer = createAppContainer(
   createStackNavigator(
@@ -12,6 +13,9 @@ const AppContainer = createAppContainer(
       },
       Transactions: {
         screen: Transactions
+      },
+      Purchase: {
+        screen: Purchase
       },
     },
     {

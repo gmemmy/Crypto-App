@@ -19,7 +19,7 @@ const LowerHalf = () => {
             }]}>
               <MaterialCommunityIcons
                 name={item.color === '#11CC71' ? 'arrow-expand-down' : 'arrow-expand-up'}
-                size={25}
+                size={20}
                 color='white'
                />
             </TouchableHighlight>
