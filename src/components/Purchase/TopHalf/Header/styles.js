@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     marginLeft: widthPercentageToDP(4),
   },
   navBar: {
-    flex: 1,
+    height: heightPercentageToDP(6.5),
     flexDirection: 'row',
     backgroundColor: '#3C3DD3',
     marginTop: heightPercentageToDP(1),

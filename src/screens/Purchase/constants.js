@@ -41,12 +41,17 @@ const cardPaymentItems = [
   },
   {
     tip: 'Send to',
-    title: 'My Bitcoin wallet',
+    title: 'My bitcoin wallet',
   },
   {
     tip: 'Transaction fee',
     title: '1.24 USD'
   }
 ]
-module.exports = { exchangeItems, cardPaymentItems };
+
+const footerText = 'You will need to pass verification to complete the purchase.\n'
+                    +'It will take only a few minutes -- all you need\n'
+                    +'is your passport and a few photos.'
+
+module.exports = { exchangeItems, cardPaymentItems, footerText };
 

@@ -5,7 +5,6 @@ import {widthPercentageToDP,
 const styles = StyleSheet.create({
   coinValue: {
     flexDirection: 'row',
-    marginTop: heightPercentageToDP(1)
   },
   text: {
     fontWeight: 'bold',

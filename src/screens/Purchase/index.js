@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import styles from './styles';
+import { heightPercentageToDP } from 'react-native-responsive-screen';
 
 // Components
 import Header from '../../components/Purchase/TopHalf/Header';
@@ -9,7 +10,7 @@ import PaymentCard from '../../components/Purchase/BottomHalf';
 
 const Purchase = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <ScrollView alwaysBounceVertical='true' style={styles.container}>
       <View style={styles.topHalf}>
         <View style={styles.header}>
           <Header pressed={navigation} />
@@ -18,10 +19,15 @@ const Purchase = ({ navigation }) => {
           <ExchangeRate />
         </View>
       </View>
+      <View style={{ 
+        height: heightPercentageToDP(3), backgroundColor: '#4D4ACD'
+        }}
+      />
       <View style={styles.bottomHalf}>
         <PaymentCard />
       </View>
-    </View>
+      <View style={{height: heightPercentageToDP(3), backgroundColor: '#F2F5FF'}} />
+    </ScrollView>
   )
 }
 

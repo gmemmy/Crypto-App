@@ -7,20 +7,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topHalf: {
-    flex: 0.4,
     backgroundColor: '#4D4ACD'
   }, 
   header: {
-    flex: 0.4,
     marginTop: heightPercentageToDP(5),
   },
   exchangeRate: {
-    flex: 0.5,
     marginTop: heightPercentageToDP(4),
     marginLeft: widthPercentageToDP(4),
   },
   bottomHalf: {
-    flex: 0.6
+    flex: 0.5,
+    backgroundColor: '#F2F5FF'
   }
 })
 
