@@ -1,25 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import styles from './styles';
 import { Button } from 'react-native-elements';
+import * as Google from 'expo-google-app-auth'
 
-const Home = ({ navigation }) => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.upperHalf}>
-        <Text>Crypto App</Text>
+import { showMessage } from "react-native-flash-message";
+
+class Home extends Component {
+  state = {
+    authenticated: false,
+  }
+  signIn = async () => {
+    try {
+      const result = await Google.logInAsync({
+        androidClientId: '849518871329-qos53ngs2e5kcb7l631lf4ufk835iimn.apps.googleusercontent.com',
+        scopes: ['profile', 'email'],
+      });
+  
+      if (result.type === 'success') {
+        this.setState({
+          authenticated: true,
+        })
+        if (this.state.authenticated) (
+          this.props.navigation.navigate('Transactions')
+        )
+      } else {
+        showMessage({
+          message: 'Please check your internet connection and try again.',
+          type: 'Info',
+          backgroundColor: "red",
+        })
+      }
+    } catch (e) {
+      console.log('error');
+    }
+  }
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.upperHalf}>
+          <Text style={styles.title}>
+            Crypto App
+          </Text>
+        </View>
+        <View style={styles.lowerHalf}>
+          <Button
+            onPress={() => this.signIn()} 
+            title='SignIn with Google'
+            type= 'outline'
+            raised={true}
+            containerStyle={styles.button}
+          />
+        </View>
       </View>
-      <View style={styles.lowerHalf}>
-        <Button
-          onPress={() => navigation.navigate('Transactions')} 
-          title='Login with Google'
-          type= 'outline'
-          raised={true}
-          containerStyle={styles.button}
-        />
-      </View>
-    </View>
-  )
+    )
+  }
 }
 
 export default Home;

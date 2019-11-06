@@ -4,11 +4,12 @@ import styles from './styles';
 import { Card, Button } from 'react-native-elements';
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen'; 
 import { cardPaymentItems, footerText } from '../../../screens/Purchase/constants';
+import { showMessage } from "react-native-flash-message";
 
 // Icons
 import { FontAwesome, Ionicons, AntDesign } from '@expo/vector-icons';
 
-const PaymentCard = () => {
+const PaymentCard = ({ navigation }) => {
   return (
     <Fragment>
       <Card containerStyle={styles.card}>
@@ -111,6 +112,13 @@ const PaymentCard = () => {
         containerStyle={styles.buttonContainer}
         buttonStyle={styles.button}
         iconContainerStyle={styles.iconContainer}
+        onPress={() => (
+          showMessage({
+            message: 'Transaction successful.',
+            type: 'Info',
+            backgroundColor: 'green'
+          })
+        )}
       />
     </Fragment>
   )
