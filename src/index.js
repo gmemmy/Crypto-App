@@ -22,7 +22,8 @@ const AppContainer = createAppContainer(
       initialRoute: Home,
       headerMode: 'none',
       navigationOptions: {
-          headerVisible: false,
+        headerVisible: false,
+        headerLeft: null
       }
     }
   )

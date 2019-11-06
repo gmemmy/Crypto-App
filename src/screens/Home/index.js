@@ -6,6 +6,11 @@ import * as Google from 'expo-google-app-auth'
 
 import { showMessage } from "react-native-flash-message";
 
+// Icons
+import { AntDesign } from '@expo/vector-icons';
+import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 class Home extends Component {
   state = {
     authenticated: false,
@@ -44,13 +49,16 @@ class Home extends Component {
           </Text>
         </View>
         <View style={styles.lowerHalf}>
-          <Button
-            onPress={() => this.signIn()} 
-            title='SignIn with Google'
-            type= 'outline'
-            raised={true}
-            containerStyle={styles.button}
-          />
+          <TouchableOpacity style={styles.button}
+            onPress={() => this.signIn()}>
+            <AntDesign
+              name='google'
+              color='#3B3B95'
+              size={heightPercentageToDP(5)}
+              style={{ marginRight: widthPercentageToDP(3) }}
+            />
+            <Text style={styles.buttonText}>SignIn with Google</Text>
+          </TouchableOpacity>
         </View>
       </View>
     )
