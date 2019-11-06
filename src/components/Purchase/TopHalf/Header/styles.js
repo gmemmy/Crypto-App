@@ -36,6 +36,14 @@ const styles = StyleSheet.create({
     marginLeft: widthPercentageToDP(1),
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  unhighlighted: {
+    borderRadius: heightPercentageToDP(0.9),
+    width: widthPercentageToDP(43),
+    height: heightPercentageToDP(5),
+    marginLeft: widthPercentageToDP(1),
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
 

@@ -21,13 +21,23 @@ const Header = (props) => {
         <Text style={styles.headerTitle}>BUY</Text>
       </View>
       <View style={styles.navBar}>
-        <TouchableOpacity style={styles.highlight}>
+        <TouchableOpacity style={
+          !props.onHistoryScreen ? (
+            styles.highlight
+          ) : (
+            styles.unhighlighted
+          )
+        }>
           <Text style={styles.navbarText}>Purchase</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={[styles.navbarText,
-            { marginLeft: widthPercentageToDP(15) }]}
-          >
+        <TouchableOpacity style={
+          props.onHistoryScreen ? (
+            styles.highlight
+          ) : (
+            styles.unhighlighted
+          )
+        }>
+          <Text style={styles.navbarText}>
             History
           </Text>
         </TouchableOpacity>

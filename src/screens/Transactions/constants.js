@@ -9,7 +9,7 @@ const cards = [
     type: 'BTC',
     equivalent: '18,659.55',
     equivalentType: 'USD',
-    backgroundColor: '#EB9240'
+    backgroundColor: '#EB9240',
   },
   {
     logo: bitcoin,
@@ -37,54 +37,60 @@ const tradeHistory = [
     status: 'Received',
     date: 'Oct 25, 5:25PM',
     value: '+0.00102000',
-    type: 'BTC',
+    currency: 'BTC',
     equivalent: '234',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    type: 'feed'
   },
   {
     color: '#F76869',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
     value: '-0.030102000',
-    type: 'LTC',
+    currency: 'LTC',
     equivalent: '234',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    type: 'feed'
   },
   {
     color: '#11CC71',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
     value: '+0.02102000',
-    type: 'BCH',
+    currency: 'BCH',
     equivalent: '234',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    type: 'feed'
   },
   {
     color: '#F76869',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
     value: '-0.000102000',
-    type: 'BTC',
+    currency: 'BTC',
     equivalent: '234',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    type: 'feed'
   },
   {
     color: '#11CC71',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
     value: '+0.000102000',
-    type: 'LTC',
+    currency: 'LTC',
     equivalent: '234',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    type: 'feed'
   },
   {
     color: '#F76869',
     status: 'Received',
     date: 'Oct 25, 5:25PM',
     value: '-0.000102000',
-    type: 'BTC',
+    currency: 'BTC',
     equivalent: '234',
-    equivalentType: 'USD'
+    equivalentType: 'USD',
+    type: 'feed'
   },
 ]
 module.exports = { cards, tradeHistory }

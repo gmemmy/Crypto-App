@@ -9,9 +9,9 @@ import History from './screens/History';
 const AppContainer = createAppContainer(
   createStackNavigator(
     {
-      // Home: {
-      //   screen: Home
-      // },
+      Home: {
+        screen: Home
+      },
       Transactions: {
         screen: Transactions
       },

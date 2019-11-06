@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import styles from './styles';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
+import { tradeHistory } from '../../screens/Transactions/constants';
 
 // Components
 import TopHalf from '../../components/Transactions/TopHalf/index'
@@ -15,7 +16,7 @@ const Transactions = ({ navigation }) => {
       </View>
       <View style={{height: heightPercentageToDP(3), backgroundColor: '#4D4ACD'}} />
       <View style={styles.lowerHalf}>
-        <LowerHalf />
+        <LowerHalf history={tradeHistory} />
       </View>
     </View>
   )

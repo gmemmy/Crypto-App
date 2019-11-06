@@ -13,7 +13,7 @@ const History = ({ navigation }) => {
     <ScrollView alwaysBounceVertical='true' style={styles.container}>
       <View style={styles.topHalf}>
         <View style={styles.header}>
-          <Header onFocus={true} pressed={navigation} />
+          <Header onHistoryScreen={true} pressed={navigation} />
         </View>
       </View>
       <View style={{ 

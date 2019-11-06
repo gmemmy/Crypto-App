@@ -3,28 +3,28 @@ import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
 import { Card } from 'react-native-elements';
 import styles from './styles';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
-import { tradeHistory } from '../../../screens/Transactions/constants';
 
 // Icons
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const LowerHalf = (props) => {
+  const { history } = props;
   return (
     <ScrollView alwaysBounceVertical='true'>
-      {tradeHistory.map(item => (
-        <Card containerStyle={styles.card} key={tradeHistory.indexOf(item)}>
+      {history.map(item => (
+        <Card containerStyle={styles.card} key={history.indexOf(item)}>
           <View style={styles.container}>
             <TouchableHighlight style={[styles.touchableHighlight,
-               { backgroundColor: props.history ? (
-                 props.history.map(transaction => (
-                   console.log(transaction.color)
-                 ))
-               ) : (
-                 item.color
-               )
+               { backgroundColor: item.color 
             }]}>
               <MaterialCommunityIcons
-                name={item.color === '#11CC71' ? 'arrow-expand-down' : 'arrow-expand-up'}
+                name={
+                  item.type === 'feed' ?
+                   (item.color === '#11CC71' ?
+                    'arrow-collapse-down' : 'arrow-collapse-up') :
+                    (item.color === '#11CC71' ? 
+                      'arrow-down' : item.color === '#F76869' ? 'arrow-up' : 'exclamation')
+                }
                 size={20}
                 color='white'
                />
@@ -47,7 +47,7 @@ const LowerHalf = (props) => {
                   {item.value}
                 </Text>
                 <Text style={[styles.coin, styles.valueMargin, { color: item.color }]}>
-                  {item.type}
+                  {item.currency}
                 </Text>
               </View>
               <View style={styles.equivalentValue}>
