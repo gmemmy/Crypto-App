@@ -8,14 +8,20 @@ import { tradeHistory } from '../../../screens/Transactions/constants';
 // Icons
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const LowerHalf = () => {
+const LowerHalf = (props) => {
   return (
     <ScrollView alwaysBounceVertical='true'>
       {tradeHistory.map(item => (
         <Card containerStyle={styles.card} key={tradeHistory.indexOf(item)}>
           <View style={styles.container}>
             <TouchableHighlight style={[styles.touchableHighlight,
-               { backgroundColor: item.color 
+               { backgroundColor: props.history ? (
+                 props.history.map(transaction => (
+                   console.log(transaction.color)
+                 ))
+               ) : (
+                 item.color
+               )
             }]}>
               <MaterialCommunityIcons
                 name={item.color === '#11CC71' ? 'arrow-expand-down' : 'arrow-expand-up'}

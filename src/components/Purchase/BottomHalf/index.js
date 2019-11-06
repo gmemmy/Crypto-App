@@ -9,7 +9,15 @@ import { showMessage } from "react-native-flash-message";
 // Icons
 import { FontAwesome, Ionicons, AntDesign } from '@expo/vector-icons';
 
-const PaymentCard = ({ navigation }) => {
+const PaymentCard = (props) => {
+  pressed = () => {
+    showMessage({
+      message: 'Transaction successful.',
+      type: 'Info',
+      backgroundColor: 'green'
+    })
+    props.pressed.navigate('History')
+  }
   return (
     <Fragment>
       <Card containerStyle={styles.card}>
@@ -112,13 +120,7 @@ const PaymentCard = ({ navigation }) => {
         containerStyle={styles.buttonContainer}
         buttonStyle={styles.button}
         iconContainerStyle={styles.iconContainer}
-        onPress={() => (
-          showMessage({
-            message: 'Transaction successful.',
-            type: 'Info',
-            backgroundColor: 'green'
-          })
-        )}
+        onPress={() => pressed()}
       />
     </Fragment>
   )

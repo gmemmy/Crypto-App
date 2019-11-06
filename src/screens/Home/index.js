@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import styles from './styles';
-import { Button } from 'react-native-elements';
 import * as Google from 'expo-google-app-auth'
 
 import { showMessage } from "react-native-flash-message";

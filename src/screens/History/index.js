@@ -2,21 +2,18 @@ import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import styles from './styles';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
+import history from '../../screens/History/constants';
 
 // Components
 import Header from '../../components/Purchase/TopHalf/Header';
-import ExchangeRate from '../../components/Purchase/TopHalf/ExchangeRate';
-import PaymentCard from '../../components/Purchase/BottomHalf';
+import LowerHalf from '../../components/Transactions/LowerHalf'
 
-const Purchase = ({ navigation }) => {
+const History = ({ navigation }) => {
   return (
     <ScrollView alwaysBounceVertical='true' style={styles.container}>
       <View style={styles.topHalf}>
         <View style={styles.header}>
-          <Header pressed={navigation} />
-        </View>
-        <View style={styles.exchangeRate}>
-          <ExchangeRate />
+          <Header onFocus={true} pressed={navigation} />
         </View>
       </View>
       <View style={{ 
@@ -24,11 +21,12 @@ const Purchase = ({ navigation }) => {
         }}
       />
       <View style={styles.bottomHalf}>
-        <PaymentCard pressed={navigation} />
+        <Text style={styles.title}>History</Text>
+        <LowerHalf history={history} />
       </View>
       <View style={{height: heightPercentageToDP(3), backgroundColor: '#F2F5FF'}} />
     </ScrollView>
   )
 }
 
-export default Purchase;
+export default History;
