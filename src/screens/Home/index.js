@@ -56,7 +56,7 @@ class Home extends Component {
               size={heightPercentageToDP(5)}
               style={{ marginRight: widthPercentageToDP(3) }}
             />
-            <Text style={styles.buttonText}>SignIn with Google</Text>
+            <Text style={styles.buttonText}>Signin with Google</Text>
           </TouchableOpacity>
         </View>
       </View>
