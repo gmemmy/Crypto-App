@@ -1,3 +1,4 @@
+
 const exchangeItems = [
   {
     value: '1',
@@ -21,4 +22,31 @@ const exchangeItems = [
   }
 ]
 
-export default exchangeItems;
+const cardPaymentItems = [
+  {
+    tip: 'Choose payment method',
+    title: 'Visa / MasterCard'
+  },
+  {
+    tip: 'You give',
+    title: '0.00',
+    currency: 'USD',
+    backgroundColor: '#CDD0EB'
+  },
+  {
+    tip: 'You receive',
+    title: '0.00',
+    currency: 'BTC',
+    backgroundColor: '#F8E3D7'
+  },
+  {
+    tip: 'Send to',
+    title: 'My Bitcoin wallet',
+  },
+  {
+    tip: 'Transaction fee',
+    title: '1.24 USD'
+  }
+]
+module.exports = { exchangeItems, cardPaymentItems };
+

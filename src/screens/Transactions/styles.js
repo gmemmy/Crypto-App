@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4D4ACD',
   },
   lowerHalf: {
-    flex: heightPercentageToDP(2),
+    flex: 2,
     backgroundColor: '#F2F5FF'
   }
 });

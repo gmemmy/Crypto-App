@@ -3,8 +3,9 @@ import { Text, View } from 'react-native';
 import styles from './styles';
 
 // Components
-import Header from '../../components/Purchase/Header';
-import ExchangeRate from '../../components/Purchase/ExchangeRate';
+import Header from '../../components/Purchase/TopHalf/Header';
+import ExchangeRate from '../../components/Purchase/TopHalf/ExchangeRate';
+import PaymentCard from '../../components/Purchase/BottomHalf';
 
 const Purchase = ({ navigation }) => {
   return (
@@ -18,7 +19,7 @@ const Purchase = ({ navigation }) => {
         </View>
       </View>
       <View style={styles.bottomHalf}>
-
+        <PaymentCard />
       </View>
     </View>
   )

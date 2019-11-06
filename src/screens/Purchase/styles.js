@@ -11,13 +11,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#4D4ACD'
   }, 
   header: {
-    flex: 0.5,
+    flex: 0.4,
     marginTop: heightPercentageToDP(5),
   },
   exchangeRate: {
     flex: 0.5,
-    marginTop: heightPercentageToDP(2),
+    marginTop: heightPercentageToDP(4),
     marginLeft: widthPercentageToDP(4),
+  },
+  bottomHalf: {
+    flex: 0.6
   }
 })
 

@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     marginLeft: widthPercentageToDP(4),
   },
   navBar: {
-    flex: 0.6,
+    flex: 1,
     flexDirection: 'row',
     backgroundColor: '#3C3DD3',
     marginTop: heightPercentageToDP(1),
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     borderRadius: heightPercentageToDP(0.9),
     width: widthPercentageToDP(43),
     height: heightPercentageToDP(5),
-    marginLeft: widthPercentageToDP(2),
+    marginLeft: widthPercentageToDP(1),
     justifyContent: 'center',
     alignItems: 'center'
   }

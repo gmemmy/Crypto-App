@@ -1,6 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import {widthPercentageToDP,
-  heightPercentageToDP} from 'react-native-responsive-screen';
+import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 const styles = StyleSheet.create({
   container: {

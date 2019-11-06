@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Text, View } from 'react-native';
 import styles from './styles';
-import exchangeItems from '../../../screens/Purchase/constants';
+import { exchangeItems } from '../../../../screens/Purchase/constants';
 
 const ExchangeRate = () => {
   return (
