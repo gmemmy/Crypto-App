@@ -1,13 +1,17 @@
 import React, { Fragment, Component } from 'react';
-import { Text, View, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { Text, View, TouchableOpacity, TouchableHighlight,
+  Picker } from 'react-native';
 import styles from './styles';
 import { Card, Button, Input } from 'react-native-elements';
+
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen'; 
+
 import { cardPaymentItems, footerText } from '../../../screens/Purchase/constants';
 import { showMessage } from "react-native-flash-message";
 
 // Icons
 import { FontAwesome, Ionicons, AntDesign } from '@expo/vector-icons';
+
 
 class PaymentCard extends Component {
   state = {
@@ -30,7 +34,7 @@ class PaymentCard extends Component {
   calculate = () => {
     if (this.validate()) {
       return this.setState({
-        result: eval(this.state.value * 2500)
+        result: eval(this.state.value / 2500)
       })
     } else {
       return showMessage({

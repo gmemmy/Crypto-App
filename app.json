@@ -25,6 +25,7 @@
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "package": "com.gmemmy.crypto_app",
       "config": {
         "googleSignIn": {

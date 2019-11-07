@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import styles from './styles';
-import * as Google from 'expo-google-app-auth'
+import * as Google from 'expo-google-app-auth';
 
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 import { showMessage } from "react-native-flash-message";
@@ -19,6 +19,8 @@ class Home extends Component {
         androidClientId: '849518871329-11ulfip2qub21lstqlb8bvdd5c1a6240.apps.googleusercontent.com',
         androidStandaloneAppClientId: '849518871329-rokcjgoj44geajepr4qg5l4ng2asdisp.apps.googleusercontent.com',
         scopes: ['profile', 'email'],
+        behavior: 'web',
+        webClientId: ''
       });
   
       if (result.type === 'success') {
