@@ -9,9 +9,9 @@ import History from './screens/History';
 const AppContainer = createAppContainer(
   createStackNavigator(
     {
-      Home: {
-        screen: Home
-      },
+      // Home: {
+      //   screen: Home
+      // },
       Transactions: {
         screen: Transactions
       },
@@ -23,7 +23,7 @@ const AppContainer = createAppContainer(
       }
     },
     {
-      initialRoute: Home,
+      initialRoute: Transactions,
       headerMode: 'none',
       navigationOptions: {
         headerVisible: false,

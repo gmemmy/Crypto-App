@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     marginLeft: widthPercentageToDP(23.5),
     marginBottom: heightPercentageToDP(4)
   },
-  choosePaymentText: {
+  tip: {
     color: '#BABABA',
     fontSize: heightPercentageToDP(2)
   },
@@ -83,8 +83,12 @@ const styles = StyleSheet.create({
     borderRadius: widthPercentageToDP(10),
   },
   iconContainer: {
-    marginLeft: widthPercentageToDP(5)
+    marginLeft: widthPercentageToDP(5),
   },
+  input: {
+    width: widthPercentageToDP(30),
+    marginRight: widthPercentageToDP(10),
+  }
 });
 
 export default styles;
