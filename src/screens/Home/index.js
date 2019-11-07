@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import * as Google from 'expo-google-app-auth'
 
+import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 import { showMessage } from "react-native-flash-message";
 
 // Icons
 import { AntDesign } from '@expo/vector-icons';
-import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class Home extends Component {
   state = {
@@ -20,8 +19,6 @@ class Home extends Component {
         androidClientId: '849518871329-11ulfip2qub21lstqlb8bvdd5c1a6240.apps.googleusercontent.com',
         androidStandaloneAppClientId: '849518871329-rokcjgoj44geajepr4qg5l4ng2asdisp.apps.googleusercontent.com',
         scopes: ['profile', 'email'],
-        behavior: 'web',
-        redirectUrl: 'https://auth.expo.io/@gmemmy/crypto-app'
       });
   
       if (result.type === 'success') {
@@ -33,7 +30,7 @@ class Home extends Component {
         )
       } else {
         showMessage({
-          message: 'Please check your internet connection and try again.',
+          message: 'Unable to signin. Please try again.',
           type: 'Info',
           backgroundColor: "red",
         })

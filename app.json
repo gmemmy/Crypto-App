@@ -2,7 +2,7 @@
   "expo": {
     "name": "Crypto App",
     "slug": "crypto-app",
-    "privacy": "unlisted",
+    "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
@@ -29,7 +29,7 @@
       "config": {
         "googleSignIn": {
           "apiKey": "AIzaSyBccjPAJ43e75QF3XUETh9a_ZKIkurnbtQ",
-          "certificateHash": "D333E9590FE6214FA1552874DD75146069FE8397"
+          "certificateHash": "A9E268C67E45C85A408A81A4B90D5E11940CB5750E94442AAA28629BBF1F41BB"
         }
       }
     }
