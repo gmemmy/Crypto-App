@@ -2,7 +2,7 @@
   "expo": {
     "name": "Crypto App",
     "slug": "crypto-app",
-    "privacy": "public",
+    "privacy": "unlisted",
     "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
