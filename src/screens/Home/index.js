@@ -20,7 +20,8 @@ class Home extends Component {
         androidClientId: '849518871329-11ulfip2qub21lstqlb8bvdd5c1a6240.apps.googleusercontent.com',
         androidStandaloneAppClientId: '849518871329-rokcjgoj44geajepr4qg5l4ng2asdisp.apps.googleusercontent.com',
         scopes: ['profile', 'email'],
-        behavior: 'web'
+        behavior: 'web',
+        redirectUrl: 'https://auth.expo.io/@gmemmy/crypto-app'
       });
   
       if (result.type === 'success') {

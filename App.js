@@ -23,8 +23,6 @@ class App extends Component {
         alert('Failed to get push token for push notification!');
         return;
       }
-      // let token = await Notifications.getExpoPushTokenAsync();
-      // console.log(token);
     } else {
       alert('Must use physical device for Push Notifications');
     }
@@ -42,7 +40,7 @@ class App extends Component {
   }
   sendPushNotification = async () => {
     const message = {
-      to: Notifications.getExpoPushTokenAsync(),
+      to: this.getDeviceToken(),
       sound: 'default',
       title: 'Crypto App',
       body: 'Hey there! Crypto App is still running.',
@@ -58,9 +56,13 @@ class App extends Component {
       body: JSON.stringify(message),
     });
   };
+  getDeviceToken = async () => {
+    let token = await Notifications.getExpoPushTokenAsync();
+    return token;
+  }
   handleAppStateChange = (appState) => {
-    if (appState === 'background') {
-      setTimeout(this.sendPushNotification(), 300000)
+    if (appState == 'background') {
+      return setInterval(this.sendPushNotification(), 300000)
     }
   }
   render() {
