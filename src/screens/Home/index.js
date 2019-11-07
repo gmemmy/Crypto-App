@@ -17,7 +17,8 @@ class Home extends Component {
   signIn = async () => {
     try {
       const result = await Google.logInAsync({
-        androidClientId: '849518871329-qos53ngs2e5kcb7l631lf4ufk835iimn.apps.googleusercontent.com',
+        androidClientId: '849518871329-11ulfip2qub21lstqlb8bvdd5c1a6240.apps.googleusercontent.com',
+        androidStandaloneAppClientId: '849518871329-rokcjgoj44geajepr4qg5l4ng2asdisp.apps.googleusercontent.com',
         scopes: ['profile', 'email'],
       });
   

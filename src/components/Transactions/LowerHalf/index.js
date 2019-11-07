@@ -23,7 +23,7 @@ const LowerHalf = (props) => {
                    (item.color === '#11CC71' ?
                     'arrow-collapse-down' : 'arrow-collapse-up') :
                     (item.color === '#11CC71' ? 
-                      'arrow-down' : item.color === '#F76869' ? 'arrow-up' : 'exclamation')
+                      'arrow-down' : item.color === '#F76869' ? 'exclamation' : 'pause')
                 }
                 size={20}
                 color='white'

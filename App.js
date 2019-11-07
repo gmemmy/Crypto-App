@@ -23,8 +23,8 @@ class App extends Component {
         alert('Failed to get push token for push notification!');
         return;
       }
-      let token = await Notifications.getExpoPushTokenAsync();
-      console.log(token);
+      // let token = await Notifications.getExpoPushTokenAsync();
+      // console.log(token);
     } else {
       alert('Must use physical device for Push Notifications');
     }
@@ -45,7 +45,7 @@ class App extends Component {
       to: Notifications.getExpoPushTokenAsync(),
       sound: 'default',
       title: 'Crypto App',
-      body: 'Hey there! Crypto App',
+      body: 'Hey there! Crypto App is still running.',
       date: new Date(Date.now())
     };
     await fetch('https://exp.host/--/api/v2/push/send', {

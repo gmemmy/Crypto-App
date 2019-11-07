@@ -11,11 +11,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/litecoin.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1E1765"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -27,7 +25,13 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.gmemmy.crypto_app"
+      "package": "com.gmemmy.crypto_app",
+      "config": {
+        "googleSignIn": {
+          "apiKey": "AIzaSyBccjPAJ43e75QF3XUETh9a_ZKIkurnbtQ",
+          "certificateHash": "D333E9590FE6214FA1552874DD75146069FE8397"
+        }
+      }
     }
   }
 }
