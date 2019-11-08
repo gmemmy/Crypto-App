@@ -26,7 +26,7 @@
     },
     "android": {
       "googleServicesFile": "./google-services.json",
-      "package": "com.gmemmy.crypto_app",
+      "package": "com.gmemmy.cryptoapp",
       "config": {
         "googleSignIn": {
           "apiKey": "AIzaSyBccjPAJ43e75QF3XUETh9a_ZKIkurnbtQ",
