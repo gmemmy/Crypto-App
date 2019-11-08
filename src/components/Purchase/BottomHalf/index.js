@@ -36,13 +36,12 @@ class PaymentCard extends Component {
       return this.setState({
         result: eval(this.state.value / 2500)
       })
-    } else {
-      return showMessage({
-        message: 'Your transaction limit is $100,000',
-        type: 'Info',
-        backgroundColor: 'red'
-      })
-    }
+    } 
+    return showMessage({
+    message: 'Your transaction limit is $100,000',
+    type: 'Info',
+    backgroundColor: 'red'
+    })
   }
 
   pressed = () => {
