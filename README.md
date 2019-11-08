@@ -11,7 +11,9 @@
 - A user receives an error response upon not being able to successfully sign in.
 
 ### Screenshots
+![WhatsApp Image 2019-11-07 at 14 58 07 (2)](https://user-images.githubusercontent.com/36506774/68476621-7cde1580-022b-11ea-84c7-6fd4cfd4a78c.jpeg)
 ![WhatsApp Image 2019-11-05 at 10 53 34](https://user-images.githubusercontent.com/36506774/68372082-76bf3a80-0140-11ea-9c96-60daa160745b.jpeg)
+![WhatsApp Image 2019-11-07 at 14 58 07 (1)](https://user-images.githubusercontent.com/36506774/68476644-8d8e8b80-022b-11ea-8adb-391bf84132c6.jpeg)
 
 ### Author
 Atawodi Emmanuel
