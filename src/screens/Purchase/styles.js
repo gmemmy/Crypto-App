@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     marginTop: heightPercentageToDP(5),
   },
   exchangeRate: {
-    marginTop: heightPercentageToDP(4),
+    marginTop: heightPercentageToDP(2),
     marginLeft: widthPercentageToDP(4),
   },
   bottomHalf: {

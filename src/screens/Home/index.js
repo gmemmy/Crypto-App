@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import * as Google from 'expo-google-app-auth';
+import googleConfig from '../../../config';
 
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 import { showMessage } from "react-native-flash-message";
 
 // Icons
 import { AntDesign } from '@expo/vector-icons';
+
+const { androidClientId, androidStandaloneAppClientId,
+  scopes, behavior, webClientId } = googleConfig;
 
 class Home extends Component {
   state = {
@@ -16,13 +20,9 @@ class Home extends Component {
   signIn = async () => {
     try {
       const result = await Google.logInAsync({
-        androidClientId: '849518871329-11ulfip2qub21lstqlb8bvdd5c1a6240.apps.googleusercontent.com',
-        androidStandaloneAppClientId: '849518871329-rokcjgoj44geajepr4qg5l4ng2asdisp.apps.googleusercontent.com',
-        scopes: ['profile', 'email'],
-        behavior: 'web',
-        webClientId: '849518871329-r2q77ejng4pdjdco28ua174l781hmuu3.apps.googleusercontent.com',
+        androidClientId, androidStandaloneAppClientId, scopes,
+        behavior, webClientId
       });
-  
       if (result.type === 'success') {
         this.setState({
           authenticated: true,

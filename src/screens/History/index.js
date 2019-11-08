@@ -24,7 +24,7 @@ const History = ({ navigation }) => {
         <Text style={styles.title}>History</Text>
         <LowerHalf history={history} />
       </View>
-      <View style={{height: heightPercentageToDP(3), backgroundColor: '#F2F5FF'}} />
+      <View style={{ height: heightPercentageToDP(1) }} />
     </ScrollView>
   )
 }

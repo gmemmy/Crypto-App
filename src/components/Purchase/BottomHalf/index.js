@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import { Text, View, TouchableOpacity, TouchableHighlight,
-  Picker } from 'react-native';
+import { Text, View, TouchableOpacity, TouchableHighlight } from 'react-native';
 import styles from './styles';
 import { Card, Button, Input } from 'react-native-elements';
 
@@ -43,7 +42,6 @@ class PaymentCard extends Component {
     backgroundColor: 'red'
     })
   }
-
   pressed = () => {
     showMessage({
       message: 'Transaction successful.',
@@ -70,12 +68,15 @@ class PaymentCard extends Component {
                   {item.tip}
                 </Text>
                 {cardPaymentItems.indexOf(item) === 0 && (
-                  <View style={{ flexDirection: 'row', alignItems:'center' }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <FontAwesome
                       name='cc-mastercard'
                       size={20}
+                      style={{ marginTop: heightPercentageToDP(1.3) }}
                     />
-                    <Text style={styles.rowTitle}>{item.title}</Text>
+                    <Text style={[styles.rowTitle, { marginLeft: widthPercentageToDP(2) }]}>
+                      {item.title}
+                    </Text>
                   </View>
                 )}
                 {cardPaymentItems.indexOf(item) !== 0 && (
@@ -86,7 +87,7 @@ class PaymentCard extends Component {
                         blurOnSubmit={true}
                         onChangeText={this.onChange}
                         containerStyle={styles.input}
-                        inputContainerStyle={{ height: 25 }}
+                        inputContainerStyle={{ height: heightPercentageToDP(5) }}
                       />
                     ) : (
                       <Text style={styles.rowTitle}>
@@ -96,7 +97,9 @@ class PaymentCard extends Component {
                       </Text>
                     )}
                     {cardPaymentItems.indexOf(item) === 3 && (
-                      <TouchableOpacity style={{ marginLeft: widthPercentageToDP(4) }}>
+                      <TouchableOpacity style={{ marginLeft: widthPercentageToDP(3),
+                        marginTop: heightPercentageToDP(1) }}
+                      >
                         <Ionicons
                           name='md-arrow-dropdown'
                           size={25}
@@ -135,7 +138,7 @@ class PaymentCard extends Component {
                   name='qrcode'
                   size={25} 
                   style={{
-                    marginLeft: widthPercentageToDP(25)
+                    marginLeft: widthPercentageToDP(33)
                   }}
                 />
               )}

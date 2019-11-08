@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
     marginTop: heightPercentageToDP(3)
   },
   dropDownIcon: {
-    marginLeft: widthPercentageToDP(23.5),
-    marginBottom: heightPercentageToDP(4)
+    marginLeft: 'auto',
+    marginRight: heightPercentageToDP(3.5)
   },
   tip: {
     color: '#BABABA',
-    fontSize: heightPercentageToDP(2)
+    fontSize: heightPercentageToDP(1.7)
   },
   infoColumn: {
     alignItems: 'baseline',
@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
   },
   rowTitle: {
     color: '#414143',
-    marginLeft: widthPercentageToDP(1),
-    fontSize: heightPercentageToDP(3)
+    fontSize: heightPercentageToDP(2.5),
+    marginTop: heightPercentageToDP(1)
   },
   currencyDropdown: {
     marginLeft: 'auto',
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     marginTop: heightPercentageToDP(3)
   },
   footerText: {
-    fontSize: 9,
+    fontSize: heightPercentageToDP(1.3),
     color: '#A4A5AC',
     marginLeft: widthPercentageToDP(2)
   },
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: widthPercentageToDP(90),
     marginLeft: widthPercentageToDP(4),
-    marginTop: widthPercentageToDP(3),
+    marginTop: heightPercentageToDP(2)
   },
   button: {
     backgroundColor: '#3B3B95',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: widthPercentageToDP(30),
-    marginRight: widthPercentageToDP(10),
+    marginRight: 'auto'
   }
 });
 

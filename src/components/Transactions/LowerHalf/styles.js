@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { widthPercentageToDP } from 'react-native-responsive-screen';
+import { widthPercentageToDP, heightPercentageToDP } from 'react-native-responsive-screen';
 
 const styles = StyleSheet.create({
   container: {
@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   },
   portion2: {
     marginLeft: widthPercentageToDP(6),
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
+    marginLeft: 'auto'
   },
   coinValue: {
     flexDirection: 'row',
@@ -32,14 +33,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   coin: {
-    fontSize: 14
+    fontSize: heightPercentageToDP(2)
   },
   valueMargin: {
     marginLeft: widthPercentageToDP(1)
   },
   dollarEquivalent: {
     color: '#3C3D41',
-    fontSize: 12
+    fontSize: heightPercentageToDP(2)
+  },
+  status: {
+    fontWeight: 'bold', 
+    color: '#4A4C50',
+    fontSize: heightPercentageToDP(2)
+  },
+  date: {
+    color: '#96989C', 
+    fontSize: heightPercentageToDP(2) 
   }
 })
 

@@ -30,14 +30,10 @@ const LowerHalf = (props) => {
                />
             </TouchableHighlight>
             <View style={styles.portion1}>
-              <Text style={{ 
-                fontWeight: 'bold', 
-                color: '#4A4C50',
-                fontSize: 14
-              }}>
+              <Text style={styles.status}>
                 {item.status}
               </Text>
-              <Text style={{ color: '#96989C', fontSize: 12 }}>
+              <Text style={styles.date}>
                 {item.date}
               </Text>
             </View>
@@ -62,7 +58,7 @@ const LowerHalf = (props) => {
           </View>
         </Card>
       ))}
-      <View style={{height: heightPercentageToDP(3), backgroundColor: '#F2F5FF'}} />
+      <View style={{ height: heightPercentageToDP(3) }} />
     </ScrollView>
   )
 }

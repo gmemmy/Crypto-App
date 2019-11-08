@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import styles from './styles';
-import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 // Icons
 import { Ionicons } from '@expo/vector-icons';
@@ -26,8 +25,8 @@ const Header = (props) => {
             styles.highlight
           ) : (
             styles.unhighlighted
-          )
-        }>
+          )}
+        >
           <Text style={styles.navbarText}>Purchase</Text>
         </TouchableOpacity>
         <TouchableOpacity style={

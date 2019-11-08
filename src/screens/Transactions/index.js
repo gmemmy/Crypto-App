@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import styles from './styles';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
 import { tradeHistory } from '../../screens/Transactions/constants';

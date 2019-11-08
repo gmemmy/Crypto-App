@@ -6,8 +6,7 @@ import { exchangeItems } from '../../../../screens/Purchase/constants';
 const ExchangeRate = () => {
   return (
     <Fragment>
-      <Text style={[styles.text, { fontSize: 15,
-         color: '#ACABF0', fontWeight: 'normal' }]}
+      <Text style={[styles.text, styles.exchangeRate]}
       >
         Exchange Rate
       </Text>

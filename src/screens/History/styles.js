@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2F5FF',
   },
   title: {
-    marginLeft: widthPercentageToDP(3),
+    marginLeft: widthPercentageToDP(4),
     marginTop: heightPercentageToDP(1),
     color: '#000'
   }

@@ -49,8 +49,8 @@ const cardPaymentItems = [
   }
 ]
 
-const footerText = 'You will need to pass verification to complete the purchase.\n'
-                    +'It will take only a few minutes -- all you need\n'
+const footerText = 'You will need to pass verification to complete the\n purchase. '
+                    +'It will take only a few minutes -- all you need\n '
                     +'is your passport and a few photos.'
 
 module.exports = { exchangeItems, cardPaymentItems, footerText };

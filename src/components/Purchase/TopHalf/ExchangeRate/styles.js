@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-import {widthPercentageToDP,
-  heightPercentageToDP} from 'react-native-responsive-screen';
+import { widthPercentageToDP, heightPercentageToDP } from 'react-native-responsive-screen';
 
 const styles = StyleSheet.create({
   coinValue: {
@@ -8,8 +7,14 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: 'bold',
-    fontSize: 25,
+    fontSize: heightPercentageToDP(3.5),
     paddingHorizontal: widthPercentageToDP(1)
+  },
+  exchangeRate: {
+    fontSize: heightPercentageToDP(2),
+    color: '#ACABF0', 
+    fontWeight: 'normal',
+    marginBottom: heightPercentageToDP(1)
   }
 })
 
