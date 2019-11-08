@@ -20,7 +20,7 @@ class Home extends Component {
         androidStandaloneAppClientId: '849518871329-rokcjgoj44geajepr4qg5l4ng2asdisp.apps.googleusercontent.com',
         scopes: ['profile', 'email'],
         behavior: 'web',
-        webClientId: ''
+        webClientId: '849518871329-r2q77ejng4pdjdco28ua174l781hmuu3.apps.googleusercontent.com',
       });
   
       if (result.type === 'success') {
