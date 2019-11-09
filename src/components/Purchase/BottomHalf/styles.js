@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
   dropDownIcon: {
     marginLeft: 'auto',
-    marginRight: heightPercentageToDP(3.5)
+    marginRight: heightPercentageToDP(4)
   },
   tip: {
     color: '#BABABA',
