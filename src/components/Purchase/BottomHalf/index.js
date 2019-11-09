@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import { Text, View, TouchableOpacity, TouchableHighlight } from 'react-native';
 import styles from './styles';
 import { Card, Button, Input } from 'react-native-elements';
+import ModalDropdown from 'react-native-modal-dropdown';
 
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen'; 
 
@@ -15,32 +16,40 @@ import { FontAwesome, Ionicons, AntDesign } from '@expo/vector-icons';
 class PaymentCard extends Component {
   state = {
     value: '',
-    BTC: '2500',
-    LTE: '490',
-    ETH: '1200',
+    BTC: 'BTC',
+    LTE: 'LTE',
+    ETH: 'ETH',
     result: '0.00'
   }
 
   onChange = (value) => this.setState({value})
 
   validate = () => {
+    if (this.state.value === '') {
+      return showMessage({
+        message: 'Please fill in input to make a transaction',
+        type: 'Info',
+        backgroundColor: 'red'
+        })
+    }
     if(this.state.value > 100000) {
-      return false
+      return showMessage({
+        message: 'Your transaction limit is $100,000',
+        type: 'Info',
+        backgroundColor: 'red'
+        })
     }
     return true;
   }
-
-  calculate = () => {
+  calculate = (selected) => {
     if (this.validate()) {
       return this.setState({
-        result: eval(this.state.value / 2500)
+        result: this.state.BTC === selected ? 
+        ( eval(this.state.value / 2500)) : (this.state.ETH === selected ? (
+         eval(this.state.value / 490)
+       ) : eval(this.state.value / 1200))
       })
     } 
-    return showMessage({
-    message: 'Your transaction limit is $100,000',
-    type: 'Info',
-    backgroundColor: 'red'
-    })
   }
   pressed = () => {
     showMessage({
@@ -51,6 +60,7 @@ class PaymentCard extends Component {
     this.props.pressed.navigate('History')
   }
   render() {
+    const { BTC, ETH, LTE } = this.state
     return (
       <Fragment>
         <Card containerStyle={styles.card}>
@@ -120,10 +130,14 @@ class PaymentCard extends Component {
                 </TouchableOpacity>
               )}
               {item.currency && (
-                <TouchableOpacity style={[
-                  styles.currencyDropdown, { backgroundColor: item.backgroundColor }]}
-                  onPress={this.calculate}
-                >
+                <ModalDropdown onSelect={(index, value) => {
+                  this.calculate(index)
+                  cardPaymentItems.indexOf(item) === 3 ?
+                   item.currency = value : item.currency = value
+                }} options={[
+                  BTC, LTE, ETH, 'USD'
+                ]} style={[
+                  styles.currencyDropdown, { backgroundColor: item.backgroundColor }]}>
                   <Text style={styles.currency}>{item.currency}</Text>
                   <Ionicons
                     name='md-arrow-dropdown'
@@ -131,7 +145,7 @@ class PaymentCard extends Component {
                     color='#524F9A' 
                     style={styles.dropDown}
                   />
-                </TouchableOpacity>
+                </ModalDropdown>
               )}
               {cardPaymentItems.indexOf(item) === 3 && (
                 <FontAwesome

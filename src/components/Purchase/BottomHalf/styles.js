@@ -39,20 +39,22 @@ const styles = StyleSheet.create({
   },
   currencyDropdown: {
     marginLeft: 'auto',
-    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     width: widthPercentageToDP(26),
     height: heightPercentageToDP(6),
     borderRadius: widthPercentageToDP(50 / 2),
     marginRight: widthPercentageToDP(3)
   },
   currency: {
-    fontSize: heightPercentageToDP(3),
-    color: '#4D4ACD'
+    fontSize: heightPercentageToDP(2),
+    color: '#4D4ACD',
+    marginTop: heightPercentageToDP(2),
+    position: 'absolute'
   },
   dropDown: {
-    marginLeft: widthPercentageToDP(4)
+    marginLeft: widthPercentageToDP(12),
+    marginTop: heightPercentageToDP(1.5)
   },
   footer: {
     flexDirection: 'row',
