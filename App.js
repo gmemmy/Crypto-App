@@ -67,7 +67,7 @@ class App extends Component {
   
   _handleAppStateChange = (appState) => {
     if (appState === 'background') {
-      setTimeout(() => this.sendPushNotification(), 300000)
+      setTimeout(this.sendPushNotification(), 300000)
     }
   }
   render() {
