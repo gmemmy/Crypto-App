@@ -67,7 +67,7 @@ class PaymentCard extends Component {
           {cardPaymentItems.map((item, index) => (
             <View key={index}
               style={[styles.row,
-                { borderBottomWidth: cardPaymentItems.indexOf(item) === 4 ?
+                { borderBottomWidth: index === 4 ?
                   heightPercentageToDP(0) : (
                   heightPercentageToDP(0.1)
                 )}

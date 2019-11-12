@@ -1,4 +1,5 @@
 # Crypto-App
+This app is live on - https://expo.io/@gmemmy/cryptoapp
 
 ### Features
 - A user can sign in using his/her google account, receives a custom error message if the user is unable to sign in.
