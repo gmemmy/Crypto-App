@@ -11,8 +11,8 @@ const ExchangeRate = () => {
         Exchange Rate
       </Text>
       <View style={styles.coinValue}>
-        {exchangeItems.map(item => (
-          <Text key={exchangeItems.indexOf(item)} style={
+        {exchangeItems.map((item, index)=> (
+          <Text key={index} style={
             [styles.text, { color: item.color }]}
           >
             {item.value}

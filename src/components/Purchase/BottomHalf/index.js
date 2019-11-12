@@ -64,8 +64,8 @@ class PaymentCard extends Component {
     return (
       <Fragment>
         <Card containerStyle={styles.card}>
-          {cardPaymentItems.map(item => (
-            <View key={cardPaymentItems.indexOf(item)}
+          {cardPaymentItems.map((item, index) => (
+            <View key={index}
               style={[styles.row,
                 { borderBottomWidth: cardPaymentItems.indexOf(item) === 4 ?
                   heightPercentageToDP(0) : (
@@ -77,7 +77,7 @@ class PaymentCard extends Component {
                 <Text style={styles.tip}>
                   {item.tip}
                 </Text>
-                {cardPaymentItems.indexOf(item) === 0 && (
+                {index === 0 && (
                   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <FontAwesome
                       name='cc-mastercard'
@@ -89,9 +89,9 @@ class PaymentCard extends Component {
                     </Text>
                   </View>
                 )}
-                {cardPaymentItems.indexOf(item) !== 0 && (
+                {index !== 0 && (
                   <View style={{ flexDirection: 'row'}}>
-                    {cardPaymentItems.indexOf(item) === 1 ? (
+                    {index === 1 ? (
                       <Input 
                         placeholder='0.00'
                         blurOnSubmit={true}
@@ -101,12 +101,12 @@ class PaymentCard extends Component {
                       />
                     ) : (
                       <Text style={styles.rowTitle}>
-                        {cardPaymentItems.indexOf(item) === 2 ? (
+                        {index === 2 ? (
                           this.state.result
                         ) : item.title}
                       </Text>
                     )}
-                    {cardPaymentItems.indexOf(item) === 3 && (
+                    {index === 3 && (
                       <TouchableOpacity style={{ marginLeft: widthPercentageToDP(3),
                         marginTop: heightPercentageToDP(1) }}
                       >
@@ -120,7 +120,7 @@ class PaymentCard extends Component {
                   </View>
                 )}
               </View>
-              {cardPaymentItems.indexOf(item) === 0 && (
+              {index === 0 && (
                 <TouchableOpacity style={styles.dropDownIcon}>
                   <Ionicons
                   name='md-arrow-dropdown'
@@ -132,7 +132,7 @@ class PaymentCard extends Component {
               {item.currency && (
                 <ModalDropdown onSelect={(index, value) => {
                   this.calculate(index)
-                  cardPaymentItems.indexOf(item) === 3 ?
+                  index === 3 ?
                    item.currency = value : item.currency = value
                 }} options={[
                   BTC, LTE, ETH, 'USD'
@@ -147,7 +147,7 @@ class PaymentCard extends Component {
                   />
                 </ModalDropdown>
               )}
-              {cardPaymentItems.indexOf(item) === 3 && (
+              {index === 3 && (
                 <FontAwesome
                   name='qrcode'
                   size={25} 

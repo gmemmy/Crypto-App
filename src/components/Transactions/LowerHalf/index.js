@@ -11,8 +11,8 @@ const LowerHalf = (props) => {
   const { history } = props;
   return (
     <ScrollView alwaysBounceVertical='true'>
-      {history.map(item => (
-        <Card containerStyle={styles.card} key={history.indexOf(item)}>
+      {history.map((item, index) => (
+        <Card containerStyle={styles.card} key={index}>
           <View style={styles.container}>
             <TouchableHighlight style={[styles.touchableHighlight,
                { backgroundColor: item.color 
